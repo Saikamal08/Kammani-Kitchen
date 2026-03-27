@@ -1,0 +1,108 @@
+.about-section { background: var(--ivory-dark); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.about-visual { position: relative; padding-bottom: 2rem; }
+
+.about-card {
+  background: var(--maroon);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0C40 22.09 22.09 40 0 40C22.09 40 40 57.91 40 80C40 57.91 57.91 40 80 40C57.91 40 40 22.09 40 0Z' fill='%23ffffff' opacity='.04'/%3E%3C/svg%3E") repeat;
+  opacity: 0.5;
+}
+
+.about-card-quote {
+  font-family: var(--ff-display);
+  font-size: 3rem;
+  color: rgba(232, 135, 42, 0.4);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.about-card-author {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: 0;
+  right: -1rem;
+  background: var(--saffron);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(232, 135, 42, 0.35);
+}
+
+.about-floating-badge strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.about-floating-badge span {
+  font-size: 0.7rem;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-text { padding-top: 1rem; }
+.about-text h2 { margin-bottom: 1.25rem; }
+.about-text p { color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+
+.about-pillars {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.pillar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.pillar-icon { font-size: 1.2rem; }
+.pillar span { font-size: 0.85rem; font-weight: 600; color: var(--teak); }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-visual { order: -1; }
+  .about-floating-badge { bottom: 0.5rem; right: 0.5rem; }
+}
